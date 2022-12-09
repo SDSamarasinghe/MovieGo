@@ -1,8 +1,26 @@
 <div class="login-container">
     <img class="film" src="assets/images/film.png">
     <div class="logo">Rotten Potatoes</div>
-    <div class="desc">On the review aggregator website Rotten Potatoes, a film has a rating of 100% if each professional review recorded by the website is assessed as positive rather than negative. 
-        The percentage is based on the film's reviews aggregated by the website and assessed as positive or negative, and when all aggregated reviews are positive, the film has a 100% rating. 
-        Listed below are films with 100% ratings that have a critics' consensus or have been reviewed by at least twenty film critics.
+    <div class="desc">On the review aggregator website Rotten Potatoes, a film has a rating of 100% if each professional
+        review recorded by the website is assessed as positive rather than negative.
+        The percentage is based on the film's reviews aggregated by the website and assessed as positive or negative,
+        and when all aggregated reviews are positive, the film has a 100% rating.
+        Listed below are films with 100% ratings that have a critics' consensus or have been reviewed by at least twenty
+        film critics.
+    </div>
+    <div class="login-form">
+        <div class="form-group">
+            <label for="uname">Username</label>
+            <input class="form-control" type="text" name="uname" [(ngModel)]="username" />
+        </div>
+        <div class="form-group">
+            <label for="pword">Password</label>
+            <input class="form-control" type="password" name="pword" [(ngModel)]="password" />
+        </div>
+
+        <div class="btn-container">
+            <div class="error">{{ errorMsg }}</div>
+            <button class="btn btn-dark" (click)="login()">Login</button>
+        </div>
     </div>
 </div>
